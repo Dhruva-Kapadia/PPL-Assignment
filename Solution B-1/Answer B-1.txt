@@ -1,0 +1,3 @@
+1. Function addTwo() is called regardless of wheteher it is called in the main() body or not as it may be called from another file. The linking process of header and other files is not done yet.
+
+2. We can get rid of this be using the static keyword. This makes the function a local function which cannot be called into any other file. If this happens then function body will disappear if it is not called.
