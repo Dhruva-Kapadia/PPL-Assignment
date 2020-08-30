@@ -1,0 +1,1 @@
+1. If if "a = a + N" is replaced by "a = a + 1" then the loop will be unrolled. That is the loop will be removed completely and gcc will just manually add the constant on every iteration.
