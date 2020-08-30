@@ -1,0 +1,1 @@
+1. a can take value from 4-99. If conditions inside the for loop will never be true hence b = b+2 will never be executed. Hence gcc will ignore this code.
