@@ -1,0 +1,10 @@
+---------------------------------------------
+A-2 Conditional Jumps and Control Flow Graphs
+---------------------------------------------
+
+1. if blocks get translated as a series of goto statements. The statements inside the if block get executed inside the goto blocks and the control is passed back to the calling function. 
+The difference between conditional gotos and unconditional gotos is that a conditional goto blocks will get control only if said condition is true else control wont go to statement. However unconditional gotos will get control atleast once.
+
+2. Yes cfg dumps are easier to read than gimple dumps.
+
+Additional: The ternary operator is handled like an if else statement in C with conditional gotos.

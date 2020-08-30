@@ -1,0 +1,18 @@
+-----------------------------
+A-5 Static Single Assignment
+-----------------------------
+
+
+1. Local variables are  suffixed with a unique  number which represents
+the assignment. For  example, `d_3' refers to the  usage of variable
+`d'  and  the  only  assignment  which reaches  this  point  is  the
+assignment `d_3'.  Variables that are  likely to be used  before any
+assignment are suffixed  with `(D)' to indicate  that the assignment
+was implicit in the declaration.  This happens to both uninitialized
+local variables and formal parameters.  For example, variable `c' is
+used as `c_4(D)' in the `if' condition.
+
+2. PHI Statements have syntax as  # a_1 = PHI <a_7(3), a_5(4)>
+This says that if control comes from basic block 3 then use value a_7 or if control comes from basic block 4 use value a_5
+
+3. A switch statement is an example of merging of two nodes by PHI

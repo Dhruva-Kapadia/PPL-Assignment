@@ -1,0 +1,7 @@
+---------
+A-3 Loops
+---------
+
+1. Basic blocks that correspond to while loops are 2, 3 and 4. While loop is executed over and over again until the initial condition becomes false. But if-else statements are purely conditional. They only get executed once, unlike while loops which is a loop. In gimple while statements are characterised by a jump to a block that is defined before the block is executed.
+
+2. The difference between for and  while loops is that a for loop has the initialisation in a separate basic block. Then the body of the loop and the increment/decrement portion are in separate blocks. Then we have conditional gotos. 

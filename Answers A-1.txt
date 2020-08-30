@@ -1,0 +1,13 @@
+----------------------------------------------
+A-1 Declarations, Expressions, and Assignments
+----------------------------------------------
+
+1. All declarations made at the start of the main function. Variables that initialised on one line are separated into different lines. Global declarations are ommitted i.e. global variables are not declared in gimple. But global variables cannot be used directly. Their value has to be assigned to a variable/temporary variable, and then the variable/temporary variable can be used.
+
+2. Complex functions are broken down in the order in which they are performed. eg: [c = a*b + 25] is broken down as [_1 = a*b], [c = _1+ 25]. The general rule for temporary variables is: 
+a. If a variable is assigned a complex operation(combination of mathematical operations), then it is broken down into simpler operations, in the order it is executed. At each step a temporary variable is assigned the value of the simple operations. 
+b. If any read/write operation has to be performed on a global variable then temporary variables are declared.
+
+3. Floats and doubles are represented in scientific notation(3.45e1) in GIMPLE. When a float is assigned to an integer the float is converted to the lowest tenth power(eg 34.1 is converted to 34).
+
+4. Read/write operations to a global variable are made by using a temporary variable or by assigning value to a variable. If the global variable is being used in a mathematical statement, then temporary variables are used. Else declared varibles might be used for simple vlue declaration.

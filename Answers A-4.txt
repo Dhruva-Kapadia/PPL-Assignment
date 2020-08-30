@@ -1,0 +1,9 @@
+-----------------------
+A-4 Arrays and Pointers
+-----------------------
+
+1. Arrays declaration is split int oseparate blocks. First the array is initialised and then it is assigned values
+
+2. GIMPLE can only perform one operation at a time. Hence a temporary variable is introduced to first read the value of b[i] and a second operation to write this value to a[i].
+
+3. Clobber is for variables that are pointers. They denote that thw scope of variable has ended.
